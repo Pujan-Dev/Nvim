@@ -18,6 +18,9 @@ return {
       window = {
         mappings = {
           ['\\'] = 'close_window',
+          ['a'] = { 'add', config = { show_path = 'relative' } },
+          ['%'] = { 'add', config = { show_path = 'relative' } },
+          ['/'] = 'add_directory',
         },
       },
     },

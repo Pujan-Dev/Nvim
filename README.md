@@ -3,7 +3,6 @@
 A highly configured, "10/10" Neovim setup based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). This configuration provides a robust development environment with LSP, formatting, linting, and debugging support for a wide range of languages.
 
 ## ✨ Features
-
 - **⚡ Blazing Fast**: Optimized for performance with lazy loading.
 - **🎨 UI**: Beautiful [Tokyonight](https://github.com/folke/tokyonight.nvim) theme with [Mini.nvim](https://github.com/echasnovski/mini.nvim) components.
 - **🧠 LSP Support**: Full Language Server Protocol support for:
@@ -51,24 +50,24 @@ A highly configured, "10/10" Neovim setup based on [kickstart.nvim](https://gith
     nvim
     ```
 
-    *Lazy.nvim will automatically install all plugins. Mason will install LSPs, formatters, and linters.*
+    _Lazy.nvim will automatically install all plugins. Mason will install LSPs, formatters, and linters._
 
 ## ⌨️ Keymaps
 
 The Leader key is set to `<Space>`.
 
-| Key | Action |
-| :--- | :--- |
-| `<Space>sf` | Search Files |
-| `<Space>sg` | Search by Grep |
-| `<Space><Space>` | Find Buffers |
-| `<Space>f` | Format Buffer |
-| `<Space>e` | Toggle File Explorer (Neo-tree) |
-| `gd` | Go to Definition |
-| `gr` | Go to References |
-| `K` | Hover Documentation |
+| Key              | Action                          |
+| :--------------- | :------------------------------ |
+| `<Space>sf`      | Search Files                    |
+| `<Space>sg`      | Search by Grep                  |
+| `<Space><Space>` | Find Buffers                    |
+| `<Space>f`       | Format Buffer                   |
+| `<Space>e`       | Toggle File Explorer (Neo-tree) |
+| `gd`             | Go to Definition                |
+| `gr`             | Go to References                |
+| `K`              | Hover Documentation             |
 
-*Press `<Space>sk` to search all keymaps.*
+_Press `<Space>sk` to search all keymaps._
 
 ## 📂 Structure
 
@@ -92,3 +91,4 @@ The Leader key is set to `<Space>`.
 ## 👏 Credits
 
 - Based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) by TJ DeVries.
+
