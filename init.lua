@@ -160,6 +160,9 @@ vim.o.smartcase = true
 -- Keep signcolumn on by default
 vim.o.signcolumn = 'yes'
 
+-- Keep the editor visually quiet.
+vim.opt.fillchars = { eob = ' ' }
+
 -- Decrease update time
 vim.o.updatetime = 250
 
@@ -949,11 +952,14 @@ require('lazy').setup({
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
-        transparent = true,
+        transparent = false,
+        dim_inactive = true,
+        terminal_colors = true,
         styles = {
           comments = { italic = false }, -- Disable italics in comments
-          sidebars = 'transparent',
-          floats = 'transparent',
+          keywords = { italic = false },
+          sidebars = 'dark',
+          floats = 'dark',
         },
       }
 

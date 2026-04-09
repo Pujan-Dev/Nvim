@@ -5,9 +5,10 @@ return {
         event = 'VeryLazy',
         config = function()
             require('notify').setup({
-                background_colour = '#1f2335',
-                stages = 'fade_in_slide_out',
-                timeout = 2500,
+                background_colour = 'NormalFloat',
+                render = 'minimal',
+                stages = 'fade',
+                timeout = 2000,
             })
             vim.notify = require('notify')
         end,

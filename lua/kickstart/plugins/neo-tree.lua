@@ -14,8 +14,15 @@ return {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
+    close_if_last_window = true,
     filesystem = {
+      filtered_items = {
+        hide_dotfiles = false,
+        hide_gitignored = false,
+        hide_hidden = false,
+      },
       window = {
+        width = 28,
         mappings = {
           ['\\'] = 'close_window',
           ['a'] = { 'add', config = { show_path = 'relative' } },

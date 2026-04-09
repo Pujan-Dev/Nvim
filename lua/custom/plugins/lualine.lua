@@ -7,30 +7,22 @@ return {
   config = function()
     require('lualine').setup {
       options = {
-        theme = 'tokyonight', -- Use a beautiful theme
+        theme = 'tokyonight',
         icons_enabled = vim.g.have_nerd_font or false,
-        section_separators = { left = '', right = '' },
-        component_separators = { left = '', right = '' },
+        section_separators = '',
+        component_separators = '',
         globalstatus = true,
         disabled_filetypes = { 'NvimTree', 'neo-tree' },
       },
       sections = {
-        lualine_a = { { 'mode', icon = '' } },
-        lualine_b = {
-          { 'branch', icon = '' },
-          { 'diff', symbols = { added = ' ', modified = ' ', removed = ' ' } },
-          { 'diagnostics', symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' } },
-        },
+        lualine_a = { 'mode' },
+        lualine_b = { 'branch', 'diff' },
         lualine_c = {
           { 'filename', file_status = true, path = 1, symbols = { modified = ' ●', readonly = ' ', unnamed = ' [No Name]' } },
         },
-        lualine_x = {
-          { 'encoding', icon = '' },
-          { 'fileformat', icons_enabled = true, symbols = { unix = '', dos = '', mac = '' } },
-          { 'filetype', icon_only = true },
-        },
-        lualine_y = { { 'progress', icon = '' } },
-        lualine_z = { { 'location', icon = '' } },
+        lualine_x = { 'diagnostics', 'filetype' },
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' },
       },
       inactive_sections = {
         lualine_a = {},
@@ -41,7 +33,7 @@ return {
         lualine_z = {},
       },
       tabline = {},
-      extensions = { 'neo-tree', 'quickfix', 'fugitive' },
+      extensions = { 'neo-tree', 'quickfix', 'fugitive', 'nvim-dap-ui' },
     }
   end,
 }
