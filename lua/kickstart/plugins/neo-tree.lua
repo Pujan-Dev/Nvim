@@ -1,5 +1,6 @@
 -- Neo-tree is a Neovim plugin to browse the file system
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
+-- Minimal configuration for speed and purity
 
 return {
   'nvim-neo-tree/neo-tree.nvim',
@@ -22,7 +23,7 @@ return {
         hide_hidden = false,
       },
       window = {
-        width = 28,
+        width = 25,
         mappings = {
           ['\\'] = 'close_window',
           ['a'] = { 'add', config = { show_path = 'relative' } },

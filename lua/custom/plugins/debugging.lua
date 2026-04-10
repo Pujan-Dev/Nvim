@@ -1,16 +1,17 @@
--- Debugging / DAP Plugins (Optional - Lightweight)
+-- Debugging / DAP Plugins (Optional - Lazy loaded only on demand for minimal startup)
 return {
   {
     'mfussenegger/nvim-dap',
     cmd = { 'DapContinue', 'DapToggleBreakpoint' },
+    lazy = true,
     dependencies = {
       'rcarriga/nvim-dap-ui',
       'theHamsta/nvim-dap-virtual-text',
       'nvim-neotest/nvim-nio',
     },
     config = function()
-      local dap = require('dap')
-      local dapui = require('dapui')
+      local dap = require 'dap'
+      local dapui = require 'dapui'
       dapui.setup()
 
       dap.listeners.before.attach.dapui_config = function()
@@ -38,7 +39,6 @@ return {
     lazy = true,
     dependencies = { 'mfussenegger/nvim-dap' },
   },
-
   {
     'theHamsta/nvim-dap-virtual-text',
     lazy = true,
